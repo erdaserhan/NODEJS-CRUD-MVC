@@ -99,8 +99,8 @@ Message.update = function(id, msg, resultat) {
         }
 
         
-        console.log("Message.update - message mis à jour : ", {id:id});
-        resultat(null, { id: id});
+        console.log("Message.update - message mis à jour : ", {id:id, ...msg});
+        resultat(null, {id: id, ...msg});
     });
 };
 
@@ -124,7 +124,7 @@ Message.deleteById = function(id, resultat) {
     });
 };
 
-// Méthode pour récupérer un message dans ls DB, en fonction de son ID
+// Méthode pour supprimer un message dans ls DB, en fonction de son ID
 Message.delete = function(id, resultat) {
     console.log(msg);
     sql.query("DELETE FROM messages WHERE id = ?", id, (err,res) => {
