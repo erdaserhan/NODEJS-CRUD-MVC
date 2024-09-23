@@ -9,10 +9,10 @@ var messages = require('../controllers/message.controller.js')
 //Afficher tous les mesages sous forme d'un tableau(admin)
 router.get('/', messages.readAll);
 
-//Afficher tous les mesages sous forme d'une leste(utilisateur)
+//Afficher tous les mesages sous forme d'une liste (utilisateur)
 router.get('/list', messages.list);
 
-/* ==== Lire un seul message semon son ID  ====== */
+/* ==== Lire un seul message selon son ID  ====== */
 router.get('/read/:id', messages.readById);
 
 /* ==== Ajouter un message  ====== */
