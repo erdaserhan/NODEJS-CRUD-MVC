@@ -1,6 +1,9 @@
 <%- include('header.ejs') -%>
+    <header>
+        <%= title %>
+    </header>
 
-    <main>
+    <section>
         <% if (donnees.length) { %>   
             <% for(var i=0; i<donnees.length; i++) { %>     
             <article>
@@ -13,6 +16,6 @@
         <% if (!donnees.length) { %>
         <p>Pas de messages actuellement !</p>
         <% } %>
-    </main>
-
+    </section>
+    <p><a href="/">Retour vers l'accueil</a></p>
 <%- include('footer.ejs') -%>

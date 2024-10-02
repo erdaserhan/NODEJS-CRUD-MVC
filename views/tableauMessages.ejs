@@ -2,7 +2,7 @@
     <header>
         <h1><%= title %></h1>
     </header>
-    <main>
+    <section>
         <% if (donnees.length) { %>
         <table>
             <thead>
@@ -30,6 +30,6 @@
         <% if (!donnees.length) { %>
         <p>Pas de messages actuellement !</p>
         <% } %>
-    </main>
-
+    </section>
+    <p><a href="/">Retour vers l'accueil</a></p>
 <%- include('footer.ejs') -%>
