@@ -28,7 +28,7 @@ exports.create = (req, res) => {
                 });
             }else {
                 console.log('Data: ', data);
-                res.render('traiter_form.ejs', { title: titrePage, nom: unMsg.nom, msg: unMsg.msg});
+                res.render('traiter_form', { title: titrePage, nom: unMsg.nom, msg: unMsg.msg});
             }
         });
     }
@@ -49,7 +49,7 @@ exports.readAll = (req, res) => {
         }
     });
 };
-    
+
 exports.newmsg = (req, res) => {
     console.log("Affichage du formulaire de création")
 }; 
