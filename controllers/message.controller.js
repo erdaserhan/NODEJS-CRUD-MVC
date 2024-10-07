@@ -18,7 +18,7 @@ exports.create = (req, res) => {
 
         const unMsg = new Message({
             nom: req.body.nom,
-            msg: req.body.nom
+            msg: req.body.msg
         });
 
         Message.create(unMsg, function(err, data) {
