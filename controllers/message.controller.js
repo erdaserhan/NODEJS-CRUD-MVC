@@ -121,7 +121,7 @@ exports.update = (req, res) => {
     const lenom = req.body.nom;
     const lemessage = req.body.msg;
 
-    if ((!req.body)||(lenom="")||(lemessage="")) {
+    if ((!req.body)||(lenom=="")||(lemessage=="")) {
         console.log('Le contenu ne peut pas être vide');
         res.redirect('/messages/edit' + req.body.id);
     } else {
@@ -129,7 +129,7 @@ exports.update = (req, res) => {
 
         const unMsg = new Message({
             nom: req.body.nom,
-            msg: req.body.nom
+            msg: req.body.msg
         });
 
         Message.update(lid, unMsg, function(err, data) {

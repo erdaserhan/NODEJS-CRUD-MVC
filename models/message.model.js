@@ -126,7 +126,6 @@ Message.deleteById = function(id, resultat) {
 
 // Méthode pour supprimer un message dans ls DB, en fonction de son ID
 Message.delete = function(id, resultat) {
-    console.log(msg);
     sql.query("DELETE FROM messages WHERE id = ?", id, (err,res) => {
         // Si erreur pendant la lecture => err
         if (err) {
